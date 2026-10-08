@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "Starting Playwright container..."
+echo "Connect to the desktop interface at: http://localhost:6080"
+
+docker run -it --rm \
+  -p 6080:6080 \
+  -p 9323:9323 \
+  -v "${1:-$(pwd)}":/workspace \
+  playwright-docker
