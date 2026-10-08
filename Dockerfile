@@ -1,5 +1,5 @@
 # Base image with Playwright and all browser dependencies pre-installed
-FROM mcr.microsoft.com/playwright:v1.42.0-jammy
+FROM mcr.microsoft.com/playwright:v1.64.0-jammy
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV DISPLAY=:99
