@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Clean up any leftover container before starting
+# Clean up any leftover container
 docker compose down --timeout 1 2>/dev/null || true
 
-echo "Building and starting Playwright Desktop..."
+echo "Starting Playwright Desktop Environment via Docker Compose..."
 docker compose up --build
