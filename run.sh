@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "Starting Playwright Desktop Environment via Docker Compose..."
-echo "Once started, open http://localhost:6080 in your browser."
-echo "Press Ctrl + C to stop the environment."
+# Clean up any leftover container before starting
+docker compose down --timeout 1 2>/dev/null || true
 
+echo "Building and starting Playwright Desktop..."
 docker compose up --build
