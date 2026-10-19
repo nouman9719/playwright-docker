@@ -1,0 +1,15 @@
+services:
+  playwright-desktop:
+    build: .
+    image: playwright-docker:latest
+    container_name: playwright-desktop
+    init: true
+    shm_size: '2gb'
+    ports:
+      - "6080:6080"
+      - "9323:9323"
+    volumes:
+      - ./files:/workspace
+    environment:
+      - DISPLAY=:99
+      - RESOLUTION=1920x1080x24
