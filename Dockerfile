@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1.7
+
 FROM mcr.microsoft.com/playwright:v1.50.0-jammy
 
 LABEL org.opencontainers.image.source="https://github.com/nouman9719/playwright-docker"
